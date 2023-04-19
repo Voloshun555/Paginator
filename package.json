@@ -5,7 +5,7 @@
   "homepage": "https://Voloshun555.github.io/PARCEL",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /PARCEL/"
   },
   "repository": {
     "type": "git",
