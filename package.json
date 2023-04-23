@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "PractikaFilm",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Voloshun555.github.io/PARCEL",
+  "homepage": "https://Voloshun555.github.io/PractikaFilm",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /PARCEL/"
+    "build": "parcel build src/*.html --public-url /PractikaFilm/"
   },
   "repository": {
     "type": "git",
