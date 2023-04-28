@@ -39,7 +39,7 @@ const glide = new Glide('.glide', config)
 
 
 
-// function addFilmGlide(data) {
+// function addFilmGlide(data) {  
 //     console.log(data)
 //     const glideDom = document.querySelector('.container__slider')
 //     const markup = `
