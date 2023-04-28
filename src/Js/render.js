@@ -4,7 +4,7 @@ export function renderTrending(data) {
         return `<li class="gallery-item" data-id="${id}">
       <a href="${checkedImg(poster_path)}" class="gallery-link">
         <div class="gallery-card">
-          <img class="gallery-photo" src="${checkedImg(poster_path)}" width="395" height="592" alt="${title}" loading="lazy" />
+          <img class="gallery-photo" src="${checkedImg(poster_path)}" width="200" height="300" alt="${title}" loading="lazy" />
         </div>
         <div class="gallery-info">
           <h2 class="gallery-title">${title}</h2>
@@ -16,7 +16,8 @@ export function renderTrending(data) {
       </li>`;
       })
       .join('')
-    list.innerHTML = markUp
+    list.innerHTML = markUp;
+    
 }
 
 // Перевірка дати виходу фільма
@@ -32,3 +33,10 @@ const checkedImg = url =>
 
 
 
+  // const backdropImage = data.backdrop_path;
+  // if (backdropImage !== null) {
+  //   const background = `https://image.tmdb.org/t/p/original/${data.backdrop_path}`;
+  //   backdrop.style.backgroundImage = `url('${background}')`;
+  //   backdrop.style.backgroundSize = 'cover';
+  //   backdrop.style.backgroundPosition = '50% 50%';
+  // }
