@@ -1,11 +1,11 @@
 {
-  "name": "PractikaFilm",
+  "name": "Paginator",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Voloshun555.github.io/PractikaFilm",
+  "homepage": "https://Voloshun555.github.io/Paginator",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /PractikaFilm/"
+    "build": "parcel build src/*.html --public-url /Paginator/"
   },
   "repository": {
     "type": "git",
