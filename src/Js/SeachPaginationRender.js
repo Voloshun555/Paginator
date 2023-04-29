@@ -12,9 +12,9 @@ form.addEventListener('submit', onSearch)
 
 
 function onSearch(evt) {
-    console.log( evt)
     evt.preventDefault();
     query = evt.target.elements.query.value.trim();
+    console.log(query)
     let page = 1;
 
 
