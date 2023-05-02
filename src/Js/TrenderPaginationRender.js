@@ -1,7 +1,7 @@
 import {fetchData} from './API'
 import {renderTrending} from './render'
 import { createPagination } from './pagination';
-
+const list = document.querySelector('.list');
 
 fetchData().then(data => {
     console.log(data)
@@ -9,7 +9,7 @@ fetchData().then(data => {
   
     const pagination = createPagination(data.total_results, data.total_pages);
     pagination.on('beforeMove', ({ page }) => {
-      
+      list.innerHTML = '';
         fetchData(page).then(data => renderTrending(data.results) )
        
     });

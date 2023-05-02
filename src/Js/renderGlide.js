@@ -1,6 +1,11 @@
 import {fetchData} from './API'
 import Glide from '@glidejs/glide';
 import {config} from './glide';
+import {modalId, renderModal} from './modalFilm'
+
+
+const backdrop = document.querySelector('.backdrop-movie');
+const modalEl = document.querySelector('.modal');
 
 
 
@@ -10,31 +15,35 @@ import {config} from './glide';
  async function onGlide() {    
    fetchData().then(data => {  
     addFilmGlide(data.results);
-    
+    console.log(data.results)
       })
 
     }
-
 
     function addFilmGlide(data) {
 const glidMarkap = document.querySelector('.glide__slides');
 const markap = data.map((data) => 
   `
-      <li class="glide__slide">
-      <img class='slider-js__img' src="${IMG}${data.poster_path}" alt="${data.title}" />
+      <li class="glide__slide" id='${data.id}'>
+      <img loading="lazy" id='${data.id}' class='slider-js__img'  src="${IMG}${data.poster_path}" alt="${data.title}" />
       </li>`
 ).join('')
 glidMarkap.innerHTML = markap
 const glide = new Glide('.glide', config)
     .mount()
+    
 }
 
 
+const slidesList = document.querySelector('.glide__slides');
+slidesList.addEventListener('click', onClickSliderCard)
 
-
-
-
-
+export function onClickSliderCard(evt) {
+  evt.preventDefault()
+  const id = evt.target.id;
+ modalId(id)
+ backdrop.classList.remove('is-hidden')
+}
 
 
 

@@ -3,7 +3,7 @@
   <button type='submit'>пошук</button>
 </form>
 
-  <div class="glide">
+  <div class="glide ">
       <h2 class="slide__title">watch trend movies</h2>
       <div class="container__slider">
         <div data-glide-el="track" class="glide__track">
@@ -19,9 +19,31 @@
 
 
 
-<div class="gallary__stail">
+<div class="gallary__stail container">
   <ul class="list gallery container">
   </ul>
 </div>
 
 <div id="pagination" class="tui-pagination"></div>
+
+
+<div class="backdrop-movie is-hidden">
+  <div class="modal-movie is-hidden">
+   
+    <button class="button-close" data-modal-close>
+      <svg class="button-close__icon-close" width="30" height="30">
+        <use href="./images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal__trailer">
+      <button
+        type="button"
+        class="modal__btn modal__btn-trailer"
+        data-btn="watchTrailer">Open
+      </button>
+      <div class="modal-trailer__backdrop is-hidden" data-about-modal>
+        <div class="modal-trailer">
+    </div>
+    <div class="movie-card"></div>
+  </div>
+</div>

@@ -4,15 +4,14 @@ export function renderTrending(data) {
         return `<li class="gallery-item" data-id="${id}">
       <a href="${checkedImg(poster_path)}" class="gallery-link">
         <div class="gallery-card">
-          <img class="gallery-photo" src="${checkedImg(poster_path)}" width="200" height="300" alt="${title}" loading="lazy" />
+          <img  id="${id}" class="gallery-photo"  src="${checkedImg(poster_path)}" width="200" height="300" alt="${title}" loading="lazy" />
         </div>
+        </a>
         <div class="gallery-info">
           <h2 class="gallery-title">${title}</h2>
-          <p class="gallery-text">${genre_ids} | ${dateRelease(
-          release_date
-        )}</p>
+          <p  class="gallery-text">${genre_ids} | ${dateRelease(release_date)}</p>
         </div>
-      </a>
+      
       </li>`;
       })
       .join('')

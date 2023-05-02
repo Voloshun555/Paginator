@@ -2,7 +2,8 @@
 import {renderTrending} from './render'
 import {fetchDataCearch} from './API'
 import { createPagination } from './pagination';
-import {showNotification} from './Notification'
+import {showNotification} from './Notification';
+import { debounce } from "debounce";
 const form = document.querySelector('.form');
 const list = document.querySelector('.list');
 
@@ -11,13 +12,11 @@ const list = document.querySelector('.list');
 form.addEventListener('submit', onSearch)
 
 
-function onSearch(evt) {
+async function onSearch(evt) {
     evt.preventDefault();
     query = evt.target.elements.query.value.trim();
     console.log(query)
     let page = 1;
-
-
 
     try {
 
@@ -27,7 +26,7 @@ function onSearch(evt) {
           }
 
 
-        fetchDataCearch(query, page).then(data => {
+     await fetchDataCearch(query, page).then(data => {
             renderTrending(data.results)
            
             const pagination = createPagination(data.total_results, data.total_pages);
